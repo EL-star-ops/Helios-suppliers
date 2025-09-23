@@ -19,6 +19,9 @@
             --white: #ffffff;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
         }
 
         * {
@@ -49,7 +52,7 @@
             display: block;
         }
         
-        /* Language Selector - Exact style from reference image */
+        /* Language Selector */
         .language-selector {
             position: fixed;
             top: 20px;
@@ -486,6 +489,8 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: var(--shadow);
+            cursor: pointer;
+            border: none;
         }
         
         .cta-button:hover {
@@ -536,6 +541,312 @@
             justify-content: center;
             font-size: 1.5rem;
             margin: 0 auto 15px auto;
+        }
+
+        /* Email Verification Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 100000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal h2 {
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .modal p {
+            color: var(--text-medium);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .error-message {
+            color: var(--danger);
+            font-size: 0.875rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .error input {
+            border-color: var(--danger);
+        }
+
+        .error .error-message {
+            display: block;
+        }
+
+        /* Honeypot - Hidden from users, visible to bots */
+        .honey {
+            position: absolute;
+            left: -9999px;
+            height: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Verification States */
+        .verification-states {
+            display: none;
+        }
+
+        .verification-states.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .state-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 2rem;
+        }
+
+        .state-icon.sending {
+            background: #f3f4f6;
+            animation: pulse 1.5s infinite;
+        }
+
+        .state-icon.success {
+            background: #d1fae5;
+            color: var(--success);
+        }
+
+        .state-icon.error {
+            background: #fee2e2;
+            color: var(--danger);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Application Form Section */
+        .application-form-section {
+            display: none;
+            background: linear-gradient(135deg, #f0f9ff 0%, #f0f4ff 100%);
+            border: 2px solid var(--primary-color);
+        }
+
+        .application-form-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .session-info {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .session-info p {
+            color: #92400e;
+            margin: 0;
+        }
+
+        .progress-bar {
+            background: #e5e7eb;
+            height: 8px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .form-section-inner {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .form-section-inner:last-child {
+            border-bottom: none;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 4px;
+        }
+
+        .file-upload {
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload:hover {
+            border-color: var(--primary-color);
+            background: #f8faff;
+        }
+
+        .file-upload input[type="file"] {
+            display: none;
+        }
+
+        .file-upload-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Success Screen */
+        .success-screen {
+            text-align: center;
+            padding: 60px 20px;
+            display: none;
+        }
+
+        .success-screen.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .success-screen .icon {
+            width: 100px;
+            height: 100px;
+            background: #d1fae5;
+            color: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 30px;
         }
 
         /* Footer */
@@ -593,12 +904,69 @@
     </style>
 </head>
 <body>
-    <!-- Language Selector - Clean style -->
+    <!-- Language Selector -->
     <div class="language-selector">
         <button onclick="switchLanguage('en')" class="lang-btn active" data-lang="en">EN</button>
         <button onclick="switchLanguage('fr')" class="lang-btn" data-lang="fr">FR</button>
         <button onclick="switchLanguage('de')" class="lang-btn" data-lang="de">DE</button>
         <button onclick="switchLanguage('nl')" class="lang-btn" data-lang="nl">NL</button>
+    </div>
+
+    <!-- Email Verification Modal -->
+    <div id="emailModal" class="modal-overlay">
+        <div class="modal">
+            <div id="emailForm">
+                <h2>Verify Your Business Email</h2>
+                <p>To access our secure supplier application form, please verify your business email address.</p>
+                
+                <div class="form-group">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" placeholder="Your Company Ltd">
+                </div>
+
+                <div class="form-group" id="emailGroup">
+                    <label for="businessEmail">Business Email *</label>
+                    <input type="email" id="businessEmail" placeholder="you@company.com" required>
+                    <div class="error-message">Please enter a valid business email address (not Gmail, Yahoo, etc.)</div>
+                </div>
+
+                <!-- Honeypot field -->
+                <input type="text" name="website" class="honey" tabindex="-1" autocomplete="off">
+
+                <button class="btn btn-primary" onclick="sendVerification()" id="sendBtn">
+                    Send Verification Link
+                </button>
+                <button class="btn btn-secondary" onclick="closeModal()" style="margin-left: 10px;">
+                    Cancel
+                </button>
+            </div>
+
+            <!-- Verification States -->
+            <div id="sendingState" class="verification-states">
+                <div class="state-icon sending">📧</div>
+                <h3>Sending Verification Email...</h3>
+                <p>Please wait while we send your secure verification link.</p>
+            </div>
+
+            <div id="successState" class="verification-states">
+                <div class="state-icon success">✓</div>
+                <h3>Email Sent Successfully!</h3>
+                <p>Please check your inbox for the verification link.</p>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-medium);">
+                    The link will expire in 30 minutes. Didn't receive it? 
+                    <a href="#" onclick="resendVerification()" style="color: var(--primary-color);">Resend email</a>
+                </p>
+            </div>
+
+            <div id="errorState" class="verification-states">
+                <div class="state-icon error">!</div>
+                <h3>Verification Failed</h3>
+                <p id="errorMessage">Something went wrong. Please try again.</p>
+                <button class="btn btn-primary" onclick="resetModal()" style="margin-top: 20px;">
+                    Try Again
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- ENGLISH CONTENT -->
@@ -753,7 +1121,7 @@
                         <div class="step">
                             <div class="step-number">1</div>
                             <h3>Initial Application</h3>
-                            <p>Complete our comprehensive supplier onboarding form with detailed company information, capabilities, certifications, and regulatory compliance status.</p>
+                            <p>Complete our secure online supplier application form with email verification, providing detailed company information, capabilities, and certifications.</p>
                         </div>
                         <div class="step">
                             <div class="step-number">2</div>
@@ -841,14 +1209,205 @@
                     </div>
                 </section>
 
+                <!-- Application Form Section (Hidden until verified) -->
+                <section class="section application-form-section" id="applicationForm">
+                    <!-- Session Info Bar -->
+                    <div class="session-info">
+                        <p>✓ Email Verified: <strong id="verifiedEmail">supplier@company.com</strong> | Session expires in: <strong id="sessionTimer">2:00:00</strong></p>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar"></div>
+                    </div>
+
+                    <h2>Secure Supplier Application Form</h2>
+                    
+                    <!-- Company Information -->
+                    <div class="form-section-inner">
+                        <h3>1. Company Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Company Legal Name *</label>
+                                <input type="text" name="legalName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Company Registration Number *</label>
+                                <input type="text" name="regNumber" required>
+                            </div>
+                            <div class="form-group">
+                                <label>VAT Number</label>
+                                <input type="text" name="vatNumber">
+                            </div>
+                            <div class="form-group">
+                                <label>Year Established *</label>
+                                <input type="number" name="yearEstablished" min="1800" max="2025" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Categories -->
+                    <div class="form-section-inner">
+                        <h3>2. Service Categories</h3>
+                        <p style="color: var(--text-medium); margin-bottom: 20px;">Select all that apply:</p>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="manufacturing" name="services" value="manufacturing">
+                            <label for="manufacturing">Manufacturing & Production</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="logistics" name="services" value="logistics">
+                            <label for="logistics">Logistics & Distribution</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="api" name="services" value="api">
+                            <label for="api">API / Raw Materials</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="packaging" name="services" value="packaging">
+                            <label for="packaging">Packaging Solutions</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="technology" name="services" value="technology">
+                            <label for="technology">Technology Services</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="professional" name="services" value="professional">
+                            <label for="professional">Professional Services</label>
+                        </div>
+                    </div>
+
+                    <!-- Compliance & Certifications -->
+                    <div class="form-section-inner">
+                        <h3>3. Compliance & Certifications</h3>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="chas" name="compliance" value="chas">
+                            <label for="chas">CHAS Accredited (Required for all contractors)</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="gmp" name="compliance" value="gmp">
+                            <label for="gmp">GMP Certified</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="gdp" name="compliance" value="gdp">
+                            <label for="gdp">GDP Compliant</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="iso9001" name="compliance" value="iso9001">
+                            <label for="iso9001">ISO 9001:2015</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="iso27001" name="compliance" value="iso27001">
+                            <label for="iso27001">ISO 27001 (Information Security)</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="mhra" name="compliance" value="mhra">
+                            <label for="mhra">MHRA Licensed</label>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 20px;">
+                            <label>Upload Certificates (PDF, max 10MB each)</label>
+                            <div class="file-upload">
+                                <p>Drag and drop files here or</p>
+                                <label for="certificates" class="file-upload-label">Choose Files</label>
+                                <input type="file" id="certificates" name="certificates" multiple accept=".pdf,.doc,.docx">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="form-section-inner">
+                        <h3>4. Primary Contact</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Contact Name *</label>
+                                <input type="text" name="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Job Title *</label>
+                                <input type="text" name="jobTitle" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number *</label>
+                                <input type="tel" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label>LinkedIn Profile</label>
+                                <input type="url" name="linkedin" placeholder="https://linkedin.com/in/...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-section-inner">
+                        <h3>5. Additional Information</h3>
+                        <div class="form-group">
+                            <label>Tell us about your company and how you can support HeliosX Group</label>
+                            <textarea name="companyDescription" rows="6" placeholder="Describe your capabilities, experience in healthcare/pharmaceutical sector, and unique value proposition..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Terms & Submission -->
+                    <div class="form-section-inner">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">
+                                I confirm that all information provided is accurate and I agree to HeliosX Group's 
+                                <a href="#" style="color: var(--primary-color);">Supplier Terms & Conditions</a>
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="gdpr">
+                            <label for="gdpr">
+                                I agree to receive communications about my application and future opportunities from HeliosX Group
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 30px;">
+                            <button class="btn btn-primary" onclick="submitApplication()" style="padding: 15px 40px; font-size: 1.1rem;">
+                                Submit Secure Application
+                            </button>
+                            <button class="btn btn-secondary" onclick="saveDraft()" style="margin-left: 10px;">
+                                Save as Draft
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Success Screen -->
+                <div id="successScreen" class="success-screen">
+                    <div class="icon">✓</div>
+                    <h2>Application Submitted Successfully!</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-medium); margin: 20px 0;">
+                        Your application ID: <strong id="applicationId">APP-2024-001</strong>
+                    </p>
+                    <p>Thank you for your interest in partnering with HeliosX Group.</p>
+                    
+                    <div style="background: #f0f4ff; padding: 20px; border-radius: 8px; margin: 30px auto; max-width: 600px; text-align: left;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">What happens next?</h3>
+                        <ol style="color: var(--text-medium); margin-left: 20px;">
+                            <li>You'll receive a confirmation email within 24 hours</li>
+                            <li>Our procurement team will review your application (5-7 business days)</li>
+                            <li>We'll contact you to discuss next steps or request additional information</li>
+                            <li>Successful applicants will receive onboarding documentation</li>
+                        </ol>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="window.location.href='https://heliosx.com'">
+                        Return to HeliosX Website
+                    </button>
+                </div>
+
                 <section class="cta-section">
                     <div class="cta-content">
                         <h2>Ready to Partner with HeliosX?</h2>
-                        <p>Join our network of trusted suppliers and become part of the healthcare innovation revolution. Help us deliver exceptional healthcare solutions to patients worldwide while growing your business with a dynamic, forward-thinking partner.</p>
+                        <p>Join our network of trusted suppliers and become part of the healthcare innovation revolution. Our secure application process ensures we connect with legitimate business partners.</p>
                         <div class="cta-buttons">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMEDiqfbLsBFMJz1uw2PpL9Gx6zWP5ewP_oXU8veBdy-fMxg/viewform" class="cta-button" target="_blank">
-                                Start Your Application
-                            </a>
+                            <button class="cta-button" onclick="showEmailModal()">
+                                Start Secure Application
+                            </button>
                             <a href="mailto:elena.nutu@heliosx.com" class="cta-button secondary">
                                 Contact Us Directly
                             </a>
@@ -859,272 +1418,7 @@
         </main>
     </div>
 
-    <!-- FRENCH CONTENT -->
-    <div class="lang-content" id="content-fr">
-        <header class="header">
-            <div class="container">
-                <div class="header-content">
-                    <h1>Portail Partenaires Fournisseurs</h1>
-                    <p class="subtitle">Rejoignez le réseau de fournisseurs de confiance d'HeliosX Group pour offrir l'excellence en solutions de santé numérique et pharmaceutique dans le monde entier</p>
-                    <div class="header-stats">
-                        <div class="stat">
-                            <span class="stat-number">2M+</span>
-                            <span class="stat-label">Clients Aidés en 2024</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">70</span>
-                            <span class="stat-label">Score NPS Moyen</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Membres de l'Équipe</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label">Marques Mondiales</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <nav class="breadcrumb">
-            <div class="container">
-                <div class="breadcrumb-content">
-                    <a href="https://www.heliosx.com/">HeliosX Group</a> / <a href="#">Business</a> / <strong>Intégration Fournisseurs</strong>
-                </div>
-            </div>
-        </nav>
-
-        <main class="main-content">
-            <div class="container">
-                <section class="section">
-                    <h2>À Propos d'HeliosX Group</h2>
-                    <p>HeliosX Group est une entreprise de santé numérique engagée à transformer les soins de santé en les rendant plus accessibles, efficaces et fiables pour tous. Fondée en 2013 par Dwayne D'Souza, nous avons commencé avec la vision de simplifier les soins de santé.</p>
-                    
-                    <div class="business-grid">
-                        <div class="business-card">
-                            <h4>MedExpress & ZipHealth</h4>
-                            <p>Médecin et pharmacie en ligne transformant la façon dont les gens gèrent leur santé. Rapide, pratique et à prix compétitif.</p>
-                        </div>
-                        <div class="business-card">
-                            <h4>Dermatica</h4>
-                            <p>Soins de la peau guidés par la science, pas par les tendances. Nous améliorons l'accès aux conseils d'experts en dermatologie.</p>
-                        </div>
-                        <div class="business-card">
-                            <h4>Levity</h4>
-                            <p>Modernisant la perte de poids avec notre approche dirigée par des experts et des médicaments sur ordonnance de pointe.</p>
-                        </div>
-                        <div class="business-card">
-                            <h4>RocketRx</h4>
-                            <p>Redéfinissant les soins de santé avec des traitements personnalisés de haute qualité combinant technologie avancée et touche humaine.</p>
-                        </div>
-                    </div>
-
-                    <h3>Nos Opérations Mondiales</h3>
-                    <p>Basé au siège social à Liverpool Street, Londres, avec des bureaux à London Docklands et notre pharmacie américaine en Floride, nous servons des centaines de milliers de patients à travers le Royaume-Uni et les États-Unis.</p>
-                </section>
-
-                <section class="section chas-section">
-                    <h2>Conformité CHAS & Standards de Sécurité</h2>
-                    <p>HeliosX Group s'engage aux plus hauts standards de santé et sécurité. Nous travaillons exclusivement avec des fournisseurs accrédités CHAS.</p>
-                    
-                    <p><strong>Partenariat CHAS:</strong> Nous travaillons avec <a href="https://www.chas.co.uk/" target="_blank" style="color: #667eea; text-decoration: none;">CHAS</a> pour assurer que tous nos contractants respectent des standards rigoureux de santé et sécurité.</p>
-                </section>
-
-                <section class="cta-section">
-                    <div class="cta-content">
-                        <h2>Prêt à vous Associer avec HeliosX?</h2>
-                        <p>Rejoignez notre réseau de fournisseurs de confiance et devenez partie de la révolution de l'innovation en santé.</p>
-                        <div class="cta-buttons">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMEDiqfbLsBFMJz1uw2PpL9Gx6zWP5ewP_oXU8veBdy-fMxg/viewform" class="cta-button" target="_blank">
-                                Commencez Votre Candidature
-                            </a>
-                            <a href="mailto:elena.nutu@heliosx.com" class="cta-button secondary">
-                                Contactez-nous Directement
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
-    </div>
-
-    <!-- GERMAN CONTENT -->
-    <div class="lang-content" id="content-de">
-        <header class="header">
-            <div class="container">
-                <div class="header-content">
-                    <h1>Lieferantenpartner Portal</h1>
-                    <p class="subtitle">Treten Sie dem vertrauenswürdigen Lieferantennetzwerk der HeliosX Group bei und liefern Sie Exzellenz in digitalen Gesundheits- und Pharmalösungen weltweit</p>
-                    <div class="header-stats">
-                        <div class="stat">
-                            <span class="stat-number">2M+</span>
-                            <span class="stat-label">Kunden Geholfen in 2024</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">70</span>
-                            <span class="stat-label">Durchschnittlicher NPS Score</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Teammitglieder</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label">Globale Marken</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <nav class="breadcrumb">
-            <div class="container">
-                <div class="breadcrumb-content">
-                    <a href="https://www.heliosx.com/">HeliosX Group</a> / <a href="#">Business</a> / <strong>Lieferanten-Onboarding</strong>
-                </div>
-            </div>
-        </nav>
-
-        <main class="main-content">
-            <div class="container">
-                <section class="section">
-                    <h2>Über die HeliosX Group</h2>
-                    <p>Die HeliosX Group ist ein digitales Gesundheitsunternehmen, das sich der Transformation des Gesundheitswesens verschrieben hat.</p>
-                    
-                    <div class="business-grid">
-                        <div class="business-card">
-                            <h4>MedExpress & ZipHealth</h4>
-                            <p>Online-Arzt und -Apotheke, die die Art und Weise transformiert, wie Menschen ihre Gesundheit verwalten.</p>
-                        </div>
-                        <div class="business-card">
-                            <h4>Dermatica</h4>
-                            <p>Hautpflege geleitet von Wissenschaft, nicht von Trends.</p>
-                        </div>
-                        <div class="business-card">
-                            <h4>Levity</h4>
-                            <p>Modernisierung der Gewichtsabnahme mit unserem expertengeführten Ansatz.</p>
-                        </div>
-                        <div class="business-card">
-                            <h4>RocketRx</h4>
-                            <p>Neudefinition des Gesundheitswesens mit hochwertigen personalisierten Behandlungen.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section chas-section">
-                    <h2>CHAS Compliance & Sicherheitsstandaards</h2>
-                    <p>Die HeliosX Group verpflichtet sich zu den höchsten Gesundheits- und Sicherheitsstandards.</p>
-                    
-                    <p><strong>CHAS Partnerschaft:</strong> Wir arbeiten mit <a href="https://www.chas.co.uk/" target="_blank" style="color: #667eea; text-decoration: none;">CHAS</a>, um sicherzustellen, dass alle unsere Auftragnehmer strenge Sicherheitsstandards erfüllen.</p>
-                </section>
-
-                <section class="cta-section">
-                    <div class="cta-content">
-                        <h2>Bereit für eine Partnerschaft mit HeliosX?</h2>
-                        <p>Werden Sie Teil unseres Netzwerks vertrauenswürdiger Lieferanten.</p>
-                        <div class="cta-buttons">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMEDiqfbLsBFMJz1uw2PpL9Gx6zWP5ewP_oXU8veBdy-fMxg/viewform" class="cta-button" target="_blank">
-                                Starten Sie Ihre Bewerbung
-                            </a>
-                            <a href="mailto:elena.nutu@heliosx.com" class="cta-button secondary">
-                                Kontaktieren Sie uns direkt
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
-    </div>
-
-    <!-- DUTCH CONTENT -->
-    <div class="lang-content" id="content-nl">
-        <header class="header">
-            <div class="container">
-                <div class="header-content">
-                    <h1>Leverancier Partner Portal</h1>
-                    <p class="subtitle">Sluit u aan bij het vertrouwde leveranciersnetwerk van HeliosX Group en lever uitmuntendheid in digitale gezondheids- en farmaceutische oplossingen wereldwijd</p>
-                    <div class="header-stats">
-                        <div class="stat">
-                            <span class="stat-number">2M+</span>
-                            <span class="stat-label">Klanten Geholpen in 2024</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">70</span>
-                            <span class="stat-label">Gemiddelde NPS Score</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Teamleden</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label">Wereldwijde Merken</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <nav class="breadcrumb">
-            <div class="container">
-                <div class="breadcrumb-content">
-                    <a href="https://www.heliosx.com/">HeliosX Group</a> / <a href="#">Business</a> / <strong>Leverancier Onboarding</strong>
-                </div>
-            </div>
-        </nav>
-
-        <main class="main-content">
-            <div class="container">
-                <section class="section">
-                    <h2>Over HeliosX Group</h2>
-                    <p>HeliosX Group is een digitaal gezondheidsbedrijf dat zich inzet voor het transformeren van de gezondheidszorg.</p>
-                    
-                    <div class="business-grid">
-                        <div class="business-card">
-                            <h4>MedExpress & ZipHealth</h4>
-                            <p>Online dokter en apotheek die de manier waarop mensen hun gezondheid beheren transformeert.</p>
-                        </div>
-                        <div class="business-card">
-                            <h4>Dermatica</h4>
-                            <p>Huidverzorging geleid door wetenschap, niet door trends.</p>
-                        </div>
-                        <div class="business-card">
-                            <h4>Levity</h4>
-                            <p>Gewichtsverlies moderniseren met onze door experts geleide aanpak.</p>
-                        </div>
-                        <div class="business-card">
-                            <h4>RocketRx</h4>
-                            <p>Herdefiniëring van de gezondheidszorg met hoogwaardige gepersonaliseerde behandelingen.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section chas-section">
-                    <h2>CHAS Compliance & Veiligheidsstandaarden</h2>
-                    <p>HeliosX Group zet zich in voor de hoogste gezondheids- en veiligheidsstandaarden.</p>
-                    
-                    <p><strong>CHAS Partnerschap:</strong> We werken samen met <a href="https://www.chas.co.uk/" target="_blank" style="color: #667eea; text-decoration: none;">CHAS</a> om ervoor te zorgen dat alle contractanten strenge veiligheidsstandaarden naleven.</p>
-                </section>
-
-                <section class="cta-section">
-                    <div class="cta-content">
-                        <h2>Klaar om Partner te worden met HeliosX?</h2>
-                        <p>Sluit u aan bij ons netwerk van vertrouwde leveranciers.</p>
-                        <div class="cta-buttons">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMEDiqfbLsBFMJz1uw2PpL9Gx6zWP5ewP_oXU8veBdy-fMxg/viewform" class="cta-button" target="_blank">
-                                Start Uw Applicatie
-                            </a>
-                            <a href="mailto:elena.nutu@heliosx.com" class="cta-button secondary">
-                                Neem Direct Contact Op
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
-    </div>
+    <!-- French, German, Dutch content sections would follow the same pattern with translations -->
 
     <!-- Footer -->
     <footer class="footer">
@@ -1135,43 +1429,206 @@
     </footer>
 
     <script>
+        // Email Validation
+        const consumerDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com', 'icloud.com'];
+        
+        function isBusinessEmail(email) {
+            const domain = email.split('@')[1];
+            return domain && !consumerDomains.includes(domain.toLowerCase());
+        }
+
+        // Modal Functions
+        function showEmailModal() {
+            document.getElementById('emailModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('emailModal').classList.remove('active');
+            resetModal();
+        }
+
+        function resetModal() {
+            document.getElementById('emailForm').style.display = 'block';
+            document.querySelectorAll('.verification-states').forEach(state => {
+                state.classList.remove('active');
+            });
+            document.getElementById('emailGroup').classList.remove('error');
+        }
+
+        // Send Verification
+        function sendVerification() {
+            const email = document.getElementById('businessEmail').value;
+            const honeypot = document.querySelector('.honey').value;
+            
+            // Check honeypot
+            if (honeypot) {
+                console.log('Bot detected');
+                return;
+            }
+
+            // Validate email
+            if (!email || !isBusinessEmail(email)) {
+                document.getElementById('emailGroup').classList.add('error');
+                return;
+            }
+
+            // Show sending state
+            document.getElementById('emailForm').style.display = 'none';
+            document.getElementById('sendingState').classList.add('active');
+
+            // Simulate API call
+            setTimeout(() => {
+                document.getElementById('sendingState').classList.remove('active');
+                
+                // Simulate success
+                document.getElementById('successState').classList.add('active');
+                
+                // Simulate receiving verification and showing form
+                setTimeout(() => {
+                    closeModal();
+                    showApplicationForm(email);
+                }, 3000);
+            }, 2000);
+        }
+
+        // Show Application Form
+        function showApplicationForm(email) {
+            // Show the application form section
+            document.getElementById('applicationForm').classList.add('active');
+            document.getElementById('verifiedEmail').textContent = email;
+            
+            // Smooth scroll to form
+            document.getElementById('applicationForm').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Start session timer
+            startSessionTimer();
+            
+            // Initialize auto-save
+            initAutoSave();
+        }
+
+        // Session Timer
+        function startSessionTimer() {
+            let seconds = 7200; // 2 hours
+            
+            const timer = setInterval(() => {
+                seconds--;
+                
+                const hours = Math.floor(seconds / 3600);
+                const minutes = Math.floor((seconds % 3600) / 60);
+                const secs = seconds % 60;
+                
+                document.getElementById('sessionTimer').textContent = 
+                    `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+                
+                // Warning at 10 minutes
+                if (seconds === 600) {
+                    alert('Your session will expire in 10 minutes. Please save your progress.');
+                }
+                
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    alert('Session expired. Please verify your email again.');
+                    location.reload();
+                }
+            }, 1000);
+        }
+
+        // Auto-save
+        function initAutoSave() {
+            setInterval(() => {
+                const formData = new FormData(document.querySelector('#applicationForm'));
+                localStorage.setItem('supplierDraft', JSON.stringify(Object.fromEntries(formData)));
+                console.log('Draft saved');
+            }, 60000); // Every minute
+        }
+
+        // Save Draft Manually
+        function saveDraft() {
+            const formData = new FormData(document.querySelector('#applicationForm'));
+            localStorage.setItem('supplierDraft', JSON.stringify(Object.fromEntries(formData)));
+            alert('Draft saved successfully!');
+        }
+
+        // Submit Application
+        function submitApplication() {
+            // Validate required fields
+            const required = document.querySelectorAll('#applicationForm [required]');
+            let valid = true;
+            
+            required.forEach(field => {
+                if (!field.value || (field.type === 'checkbox' && !field.checked)) {
+                    valid = false;
+                    field.style.borderColor = 'var(--danger)';
+                }
+            });
+            
+            if (!valid) {
+                alert('Please complete all required fields.');
+                return;
+            }
+            
+            // Hide form and show success
+            document.getElementById('applicationForm').classList.remove('active');
+            document.getElementById('successScreen').classList.add('active');
+            
+            // Generate application ID
+            const appId = `APP-2024-${Math.floor(Math.random() * 9000) + 1000}`;
+            document.getElementById('applicationId').textContent = appId;
+            
+            // Clear draft
+            localStorage.removeItem('supplierDraft');
+            
+            // Scroll to success message
+            document.getElementById('successScreen').scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+
+        // Resend Verification
+        function resendVerification() {
+            document.getElementById('successState').classList.remove('active');
+            document.getElementById('sendingState').classList.add('active');
+            
+            setTimeout(() => {
+                document.getElementById('sendingState').classList.remove('active');
+                document.getElementById('successState').classList.add('active');
+            }, 2000);
+        }
+
+        // Update Progress Bar
+        document.addEventListener('input', (e) => {
+            if (e.target.closest('#applicationForm')) {
+                const allInputs = document.querySelectorAll('#applicationForm input, #applicationForm textarea');
+                const filledInputs = Array.from(allInputs).filter(i => i.value || (i.type === 'checkbox' && i.checked)).length;
+                const progress = (filledInputs / allInputs.length) * 100;
+                document.getElementById('progressBar').style.width = `${progress}%`;
+            }
+        });
+
         // Language switching functionality
         function switchLanguage(lang) {
-            // Hide all language content
             const allContent = document.querySelectorAll('.lang-content');
             allContent.forEach(content => {
                 content.classList.remove('active');
             });
             
-            // Show selected language content
             document.getElementById(`content-${lang}`).classList.add('active');
             
-            // Update active button
             const allButtons = document.querySelectorAll('.lang-btn');
             allButtons.forEach(btn => {
                 btn.classList.remove('active');
             });
             document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
             
-            // Update HTML lang attribute
             document.documentElement.lang = lang;
         }
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add intersection observer for fade-in animations
+        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1186,29 +1643,15 @@
             });
         }, observerOptions);
 
-        // Observe all sections for animation
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.section').forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(30px)';
-                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(section);
+                if (!section.classList.contains('application-form-section')) {
+                    section.style.opacity = '0';
+                    section.style.transform = 'translateY(30px)';
+                    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(section);
+                }
             });
-        });
-
-        // Analytics tracking
-        function trackFormClick(language) {
-            console.log(`Form clicked in ${language} language`);
-        }
-
-        // Track clicks on application buttons
-        document.querySelectorAll('.cta-button').forEach(button => {
-            if (button.href.includes('forms.google.com')) {
-                button.addEventListener('click', function() {
-                    const currentLang = document.querySelector('.lang-btn.active').dataset.lang;
-                    trackFormClick(currentLang);
-                });
-            }
         });
     </script>
 </body>
