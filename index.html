@@ -729,126 +729,6 @@
             50% { opacity: 0.5; }
         }
 
-        /* Application Form Section */
-        .application-form-section {
-            display: none;
-            background: linear-gradient(135deg, #f0f9ff 0%, #f0f4ff 100%);
-            border: 2px solid var(--primary-color);
-        }
-
-        .application-form-section.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .session-info {
-            background: #fef3c7;
-            border: 1px solid #fbbf24;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-
-        .session-info p {
-            color: #92400e;
-            margin: 0;
-        }
-
-        .progress-bar {
-            background: #e5e7eb;
-            height: 8px;
-            border-radius: 4px;
-            margin-bottom: 30px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            height: 100%;
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-
-        .form-section-inner {
-            margin-bottom: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .form-section-inner:last-child {
-            border-bottom: none;
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: start;
-            gap: 10px;
-            margin: 10px 0;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            width: auto;
-            margin-top: 4px;
-        }
-
-        .file-upload {
-            border: 2px dashed #cbd5e1;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .file-upload:hover {
-            border-color: var(--primary-color);
-            background: #f8faff;
-        }
-
-        .file-upload input[type="file"] {
-            display: none;
-        }
-
-        .file-upload-label {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--primary-color);
-            color: var(--white);
-            border-radius: 6px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        /* Success Screen */
-        .success-screen {
-            text-align: center;
-            padding: 60px 20px;
-            display: none;
-        }
-
-        .success-screen.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .success-screen .icon {
-            width: 100px;
-            height: 100px;
-            background: #d1fae5;
-            color: var(--success);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            margin: 0 auto 30px;
-        }
-
         /* Footer */
         .footer {
             background: var(--text-dark);
@@ -1113,293 +993,6 @@
                     </div>
                 </section>
 
-                <section class="section">
-                    <h2>Supplier Onboarding Process</h2>
-                    <p>Our comprehensive onboarding process ensures that all suppliers meet our high standards for quality, compliance, and service excellence.</p>
-                    
-                    <div class="process-steps">
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <h3>Initial Application</h3>
-                            <p>Complete our secure online supplier application form with email verification, providing detailed company information, capabilities, and certifications.</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <h3>Technical Review</h3>
-                            <p>Our procurement and technical teams conduct thorough evaluation of your capabilities, compliance status, and alignment with our requirements within 5-7 business days.</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <h3>Compliance Assessment</h3>
-                            <p>Comprehensive regulatory compliance verification, quality system audits, facility inspections (where applicable), and reference checks with existing clients.</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">4</div>
-                            <h3>Commercial Negotiation</h3>
-                            <p>Discussion of commercial terms, service level agreements, pricing structures, payment terms, and performance metrics for successful partnership.</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">5</div>
-                            <h3>Partnership Activation</h3>
-                            <p>Successful suppliers receive comprehensive onboarding materials, partnership agreements, access to supplier portal, and integration with our procurement systems.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section follow-up-section">
-                    <h2>Supplier Relationship Management</h2>
-                    <p>We maintain active relationships with all suppliers through systematic follow-up processes and ongoing performance management to ensure continuous improvement and long-term partnerships.</p>
-                    
-                    <div class="follow-up-grid">
-                        <div class="follow-up-card">
-                            <h4>Application Follow-up</h4>
-                            <p>All applications receive acknowledgment within 24 hours. Our team actively tracks application progress and provides status updates every 48 hours during the review process.</p>
-                        </div>
-                        <div class="follow-up-card">
-                            <h4>Performance Monitoring</h4>
-                            <p>Monthly supplier performance reviews covering quality metrics, delivery performance, compliance status, and customer satisfaction scores with actionable feedback.</p>
-                        </div>
-                        <div class="follow-up-card">
-                            <h4>Partnership Development</h4>
-                            <p>Quarterly business reviews to identify growth opportunities, discuss market trends, align strategic objectives, and explore expanded collaboration areas.</p>
-                        </div>
-                        <div class="follow-up-card">
-                            <h4>Continuous Communication</h4>
-                            <p>Regular supplier newsletters, policy updates, training opportunities, and industry insights to keep partners informed of market developments and regulatory changes.</p>
-                        </div>
-                        <div class="follow-up-card">
-                            <h4>Issue Resolution</h4>
-                            <p>Dedicated escalation procedures with guaranteed response times for critical issues, systematic root cause analysis, and corrective action plan development.</p>
-                        </div>
-                        <div class="follow-up-card">
-                            <h4>Innovation Collaboration</h4>
-                            <p>Annual innovation workshops, joint product development sessions, and technology roadmap discussions to foster collaborative innovation and market leadership.</p>
-                        </div>
-                    </div>
-
-                    <h3>Our Commitment to Active Partnership</h3>
-                    <p>We don't just onboard suppliers - we actively nurture long-term strategic relationships. Our dedicated supplier relationship managers ensure consistent communication, timely issue resolution, and collaborative growth planning.</p>
-                </section>
-
-                <section class="section">
-                    <h2>Contact Our Procurement Team</h2>
-                    <p>Our experienced procurement team is ready to discuss partnership opportunities and guide you through our onboarding process.</p>
-                    
-                    <div class="contact-info">
-                        <div class="contact-grid">
-                            <div class="contact-item">
-                                <div class="contact-icon">@</div>
-                                <h3>Email Contact</h3>
-                                <p><strong>elena.nutu@heliosx.com</strong></p>
-                                <p>Primary contact for supplier inquiries</p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">⏱</div>
-                                <h3>Response Time</h3>
-                                <p><strong>Within 48 hours</strong></p>
-                                <p>For all supplier application inquiries</p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">🕒</div>
-                                <h3>Office Hours</h3>
-                                <p><strong>Monday - Friday</strong></p>
-                                <p>9:00 AM - 6:00 PM GMT</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Application Form Section (Hidden until verified) -->
-                <section class="section application-form-section" id="applicationForm">
-                    <!-- Session Info Bar -->
-                    <div class="session-info">
-                        <p>✓ Email Verified: <strong id="verifiedEmail">supplier@company.com</strong> | Session expires in: <strong id="sessionTimer">2:00:00</strong></p>
-                    </div>
-
-                    <!-- Progress Bar -->
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progressBar"></div>
-                    </div>
-
-                    <h2>Secure Supplier Application Form</h2>
-                    
-                    <!-- Company Information -->
-                    <div class="form-section-inner">
-                        <h3>1. Company Information</h3>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label>Company Legal Name *</label>
-                                <input type="text" name="legalName" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Company Registration Number *</label>
-                                <input type="text" name="regNumber" required>
-                            </div>
-                            <div class="form-group">
-                                <label>VAT Number</label>
-                                <input type="text" name="vatNumber">
-                            </div>
-                            <div class="form-group">
-                                <label>Year Established *</label>
-                                <input type="number" name="yearEstablished" min="1800" max="2025" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Categories -->
-                    <div class="form-section-inner">
-                        <h3>2. Service Categories</h3>
-                        <p style="color: var(--text-medium); margin-bottom: 20px;">Select all that apply:</p>
-                        
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="manufacturing" name="services" value="manufacturing">
-                            <label for="manufacturing">Manufacturing & Production</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="logistics" name="services" value="logistics">
-                            <label for="logistics">Logistics & Distribution</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="api" name="services" value="api">
-                            <label for="api">API / Raw Materials</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="packaging" name="services" value="packaging">
-                            <label for="packaging">Packaging Solutions</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="technology" name="services" value="technology">
-                            <label for="technology">Technology Services</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="professional" name="services" value="professional">
-                            <label for="professional">Professional Services</label>
-                        </div>
-                    </div>
-
-                    <!-- Compliance & Certifications -->
-                    <div class="form-section-inner">
-                        <h3>3. Compliance & Certifications</h3>
-                        
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="chas" name="compliance" value="chas">
-                            <label for="chas">CHAS Accredited (Required for all contractors)</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="gmp" name="compliance" value="gmp">
-                            <label for="gmp">GMP Certified</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="gdp" name="compliance" value="gdp">
-                            <label for="gdp">GDP Compliant</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="iso9001" name="compliance" value="iso9001">
-                            <label for="iso9001">ISO 9001:2015</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="iso27001" name="compliance" value="iso27001">
-                            <label for="iso27001">ISO 27001 (Information Security)</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="mhra" name="compliance" value="mhra">
-                            <label for="mhra">MHRA Licensed</label>
-                        </div>
-
-                        <div class="form-group" style="margin-top: 20px;">
-                            <label>Upload Certificates (PDF, max 10MB each)</label>
-                            <div class="file-upload">
-                                <p>Drag and drop files here or</p>
-                                <label for="certificates" class="file-upload-label">Choose Files</label>
-                                <input type="file" id="certificates" name="certificates" multiple accept=".pdf,.doc,.docx">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Information -->
-                    <div class="form-section-inner">
-                        <h3>4. Primary Contact</h3>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label>Contact Name *</label>
-                                <input type="text" name="contactName" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Job Title *</label>
-                                <input type="text" name="jobTitle" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Phone Number *</label>
-                                <input type="tel" name="phone" required>
-                            </div>
-                            <div class="form-group">
-                                <label>LinkedIn Profile</label>
-                                <input type="url" name="linkedin" placeholder="https://linkedin.com/in/...">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional Information -->
-                    <div class="form-section-inner">
-                        <h3>5. Additional Information</h3>
-                        <div class="form-group">
-                            <label>Tell us about your company and how you can support HeliosX Group</label>
-                            <textarea name="companyDescription" rows="6" placeholder="Describe your capabilities, experience in healthcare/pharmaceutical sector, and unique value proposition..."></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Terms & Submission -->
-                    <div class="form-section-inner">
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="terms" required>
-                            <label for="terms">
-                                I confirm that all information provided is accurate and I agree to HeliosX Group's 
-                                <a href="#" style="color: var(--primary-color);">Supplier Terms & Conditions</a>
-                            </label>
-                        </div>
-                        
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="gdpr">
-                            <label for="gdpr">
-                                I agree to receive communications about my application and future opportunities from HeliosX Group
-                            </label>
-                        </div>
-
-                        <div style="margin-top: 30px;">
-                            <button class="btn btn-primary" onclick="submitApplication()" style="padding: 15px 40px; font-size: 1.1rem;">
-                                Submit Secure Application
-                            </button>
-                            <button class="btn btn-secondary" onclick="saveDraft()" style="margin-left: 10px;">
-                                Save as Draft
-                            </button>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Success Screen -->
-                <div id="successScreen" class="success-screen">
-                    <div class="icon">✓</div>
-                    <h2>Application Submitted Successfully!</h2>
-                    <p style="font-size: 1.2rem; color: var(--text-medium); margin: 20px 0;">
-                        Your application ID: <strong id="applicationId">APP-2024-001</strong>
-                    </p>
-                    <p>Thank you for your interest in partnering with HeliosX Group.</p>
-                    
-                    <div style="background: #f0f4ff; padding: 20px; border-radius: 8px; margin: 30px auto; max-width: 600px; text-align: left;">
-                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">What happens next?</h3>
-                        <ol style="color: var(--text-medium); margin-left: 20px;">
-                            <li>You'll receive a confirmation email within 24 hours</li>
-                            <li>Our procurement team will review your application (5-7 business days)</li>
-                            <li>We'll contact you to discuss next steps or request additional information</li>
-                            <li>Successful applicants will receive onboarding documentation</li>
-                        </ol>
-                    </div>
-
-                    <button class="btn btn-primary" onclick="window.location.href='https://heliosx.com'">
-                        Return to HeliosX Website
-                    </button>
-                </div>
-
                 <section class="cta-section">
                     <div class="cta-content">
                         <h2>Ready to Partner with HeliosX?</h2>
@@ -1418,7 +1011,389 @@
         </main>
     </div>
 
-    <!-- French, German, Dutch content sections would follow the same pattern with translations -->
+    <!-- FRENCH CONTENT -->
+    <div class="lang-content" id="content-fr">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <h1>Portail Partenaires Fournisseurs</h1>
+                    <p class="subtitle">Rejoignez le réseau de fournisseurs de confiance du Groupe HeliosX pour offrir l'excellence en solutions de santé numérique et pharmaceutiques dans le monde entier</p>
+                    <div class="header-stats">
+                        <div class="stat">
+                            <span class="stat-number">2M+</span>
+                            <span class="stat-label">Clients Aidés en 2024</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">70</span>
+                            <span class="stat-label">Score NPS Moyen</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Membres de l'Équipe</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Marques Mondiales</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="breadcrumb">
+            <div class="container">
+                <div class="breadcrumb-content">
+                    <a href="https://www.heliosx.com/">Groupe HeliosX</a> / <a href="#">Entreprise</a> / <strong>Intégration Fournisseurs</strong>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="container">
+                <section class="section">
+                    <h2>À Propos du Groupe HeliosX</h2>
+                    <p>Le Groupe HeliosX est une entreprise de santé numérique engagée à transformer les soins de santé en les rendant plus accessibles, efficaces et fiables pour tous. Fondée en 2013 par Dwayne D'Souza, nous avons commencé avec la vision de simplifier les soins de santé, reconnaissant que tandis que d'autres industries avaient adopté la commodité et la rapidité, les soins de santé restaient lents et compliqués.</p>
+                    
+                    <p>Nous sommes le plus grand réseau de santé verticalement intégré au monde de cliniciens et de pharmacies, capable de prescrire et de livrer des médicaments à travers le globe. Notre plateforme de santé numérique offre l'accès le plus pratique aux meilleurs traitements sur ordonnance pour les clients vivant avec des conditions chroniques.</p>
+
+                    <div class="business-grid">
+                        <div class="business-card">
+                            <h4>MedExpress & ZipHealth</h4>
+                            <p>Médecin en ligne et pharmacie transformant la façon dont les gens gèrent leur santé. Rapide, pratique et compétitif, créant la façon la plus intelligente pour les clients de prendre le contrôle de leur santé.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">medexpress.co.uk | ziphealth.co</p>
+                        </div>
+                        <div class="business-card">
+                            <h4>Dermatica</h4>
+                            <p>Soins de la peau dirigés par la science, pas par les tendances. Nous améliorons l'accès aux conseils dermatologiques experts et concevons des traitements basés sur des preuves personnalisés selon vos objectifs uniques.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">dermatica.co.uk | dermatica.com</p>
+                        </div>
+                        <div class="business-card">
+                            <h4>Levity</h4>
+                            <p>Modernisation de la perte de poids avec notre approche dirigée par des experts et des médicaments sur ordonnance de pointe. Expérience simplifiée et sans tracas avec des traitements adaptés aux besoins uniques.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">joinlevity.co.uk | joinlevity.com</p>
+                        </div>
+                        <div class="business-card">
+                            <h4>RocketRx</h4>
+                            <p>Redéfinir les soins de santé avec des traitements personnalisés de haute qualité. Fondé sur le principe que chacun mérite des solutions sur mesure, combinant technologie avancée et touche humaine.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">rocketrx.com</p>
+                        </div>
+                    </div>
+
+                    <h3>Nos Opérations Mondiales</h3>
+                    <p>Basé à Liverpool Street, Londres, avec des bureaux dans les Docklands de Londres (notre centre de distribution) et notre pharmacie américaine en Floride, nous desservons des centaines de milliers de patients au Royaume-Uni et aux États-Unis. Au cœur de chacune de nos marques se trouve un processus de télémédecine asynchrone éliminant les goulots d'étranglement, augmentant l'accès et améliorant l'efficacité grâce à la technologie.</p>
+
+                    <p><strong>Notre Mission :</strong> Nous supprimons les barrières aux soins en fournissant un accès transparent aux médicaments dont les gens ont besoin—pas de voyages chez le médecin, pas d'attente dans les files de pharmacie, et pas de complexité ajoutée. Notre approche permet aux clients de gérer leur santé en privé et facilement, soutenus par une équipe de médecins et pharmaciens agréés.</p>
+                </section>
+
+                <section class="section">
+                    <h2>Avantages du Partenariat</h2>
+                    <p>Quand vous vous associez avec le Groupe HeliosX, vous accédez à un écosystème de santé dynamique, orienté croissance, engagé dans l'innovation, la qualité et l'expansion mondiale.</p>
+                    
+                    <ul>
+                        <li><strong>Accès au Marché Mondial :</strong> Accès à notre réseau établi desservant plus de 2 millions de clients au Royaume-Uni et aux États-Unis à travers nos cinq grandes marques</li>
+                        <li><strong>Plateforme Verticalement Intégrée :</strong> Partenariat avec le plus grand réseau de santé verticalement intégré au monde de cliniciens et pharmacies</li>
+                        <li><strong>Excellence Réglementaire :</strong> Cadre de conformité complet couvrant les réglementations MHRA, FDA et pharmaceutiques internationales avec support expert</li>
+                        <li><strong>Normes de Santé et Sécurité :</strong> Support complet pour l'accréditation CHAS et la conformité britannique en santé et sécurité, assurant que tous les partenaires respectent les plus hautes normes de sécurité</li>
+                        <li><strong>Leadership en Innovation :</strong> Collaboration sur des solutions de santé numérique de pointe, diagnostics pilotés par IA et développement pharmaceutique de nouvelle génération</li>
+                        <li><strong>Assurance Qualité :</strong> Partenariat avec une organisation engagée dans les normes GMP, GDP, ISO et l'amélioration continue de la qualité</li>
+                        <li><strong>Croissance Stratégique :</strong> Rejoignez un écosystème de santé en expansion rapide avec un succès prouvé et des plans d'expansion internationale ambitieux</li>
+                        <li><strong>Stabilité Financière :</strong> Partenariat avec une organisation financièrement robuste avec un historique solide et des conditions de paiement fiables</li>
+                    </ul>
+                </section>
+
+                <section class="section chas-section">
+                    <h2>Conformité CHAS et Normes de Sécurité</h2>
+                    <p>Le Groupe HeliosX s'engage aux plus hautes normes de santé et sécurité. Nous travaillons exclusivement avec des fournisseurs accrédités CHAS pour tous les services de sous-traitance afin d'assurer une conformité complète en santé et sécurité à travers nos opérations.</p>
+                    
+                    <div class="chas-grid">
+                        <div class="chas-card">
+                            <h4>🛡️ Accréditation CHAS</h4>
+                            <p>Tous les entrepreneurs doivent être accrédités CHAS (Contractors Health and Safety Assessment Scheme). Nous accompagnons les fournisseurs dans le processus d'accréditation.</p>
+                        </div>
+                        <div class="chas-card">
+                            <h4>📋 Documentation de Sécurité</h4>
+                            <p>Politiques complètes de santé et sécurité, évaluations des risques, déclarations de méthode et conformité aux réglementations britanniques de santé et sécurité.</p>
+                        </div>
+                        <div class="chas-card">
+                            <h4>🎯 Conformité Continue</h4>
+                            <p>Audits de sécurité réguliers, systèmes de rapport d'incidents et programmes d'amélioration continue pour maintenir les plus hautes normes de sécurité.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cta-section">
+                    <div class="cta-content">
+                        <h2>Prêt à Vous Associer avec HeliosX ?</h2>
+                        <p>Rejoignez notre réseau de fournisseurs de confiance et devenez partie de la révolution de l'innovation en santé. Notre processus de candidature sécurisé garantit que nous nous connectons avec des partenaires commerciaux légitimes.</p>
+                        <div class="cta-buttons">
+                            <button class="cta-button" onclick="showEmailModal()">
+                                Commencer la Candidature Sécurisée
+                            </button>
+                            <a href="mailto:elena.nutu@heliosx.com" class="cta-button secondary">
+                                Nous Contacter Directement
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- GERMAN CONTENT -->
+    <div class="lang-content" id="content-de">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <h1>Lieferanten-Partner Portal</h1>
+                    <p class="subtitle">Werden Sie Teil des vertrauenswürdigen Lieferantennetzwerks der HeliosX Group und liefern Sie Exzellenz in digitalen Gesundheits- und pharmazeutischen Lösungen weltweit</p>
+                    <div class="header-stats">
+                        <div class="stat">
+                            <span class="stat-number">2M+</span>
+                            <span class="stat-label">Kunden Geholfen in 2024</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">70</span>
+                            <span class="stat-label">Durchschnittlicher NPS-Score</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Teammitglieder</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Globale Marken</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="breadcrumb">
+            <div class="container">
+                <div class="breadcrumb-content">
+                    <a href="https://www.heliosx.com/">HeliosX Group</a> / <a href="#">Unternehmen</a> / <strong>Lieferanten-Onboarding</strong>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="container">
+                <section class="section">
+                    <h2>Über die HeliosX Group</h2>
+                    <p>Die HeliosX Group ist ein digitales Gesundheitsunternehmen, das sich der Transformation des Gesundheitswesens widmet, indem es für alle zugänglicher, effektiver und vertrauenswürdiger gemacht wird. 2013 von Dwayne D'Souza gegründet, begannen wir mit der Vision, das Gesundheitswesen zu vereinfachen, da wir erkannten, dass andere Branchen bereits Bequemlichkeit und Geschwindigkeit angenommen hatten, während das Gesundheitswesen langsam und kompliziert blieb.</p>
+                    
+                    <p>Wir sind das weltweit größte vertikal integrierte Gesundheitsnetzwerk von Klinikern und Apotheken, das in der Lage ist, Medikamente weltweit zu verschreiben und zu liefern. Unsere digitale Gesundheitsplattform bietet den bequemsten Zugang zu den besten verschreibungspflichtigen Behandlungen für Kunden mit chronischen Erkrankungen.</p>
+
+                    <div class="business-grid">
+                        <div class="business-card">
+                            <h4>MedExpress & ZipHealth</h4>
+                            <p>Online-Arzt und Apotheke, die die Art und Weise transformiert, wie Menschen ihre Gesundheit verwalten. Schnell, bequem und wettbewerbsfähig, schafft den intelligentesten Weg für Kunden, die Kontrolle über ihre Gesundheit zu übernehmen.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">medexpress.co.uk | ziphealth.co</p>
+                        </div>
+                        <div class="business-card">
+                            <h4>Dermatica</h4>
+                            <p>Hautpflege geleitet von Wissenschaft, nicht von Trends. Wir verbessern den Zugang zu fachkundiger dermatologischer Beratung und entwerfen evidenzbasierte Behandlungen, die auf Ihre einzigartigen Ziele personalisiert sind.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">dermatica.co.uk | dermatica.com</p>
+                        </div>
+                        <div class="business-card">
+                            <h4>Levity</h4>
+                            <p>Modernisierung der Gewichtsabnahme mit unserem expertengeführten Ansatz und hochmodernen verschreibungspflichtigen Medikamenten. Optimierte, problemlose Erfahrung mit auf individuelle Bedürfnisse zugeschnittenen Behandlungen.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">joinlevity.co.uk | joinlevity.com</p>
+                        </div>
+                        <div class="business-card">
+                            <h4>RocketRx</h4>
+                            <p>Neugestaltung der Gesundheitsversorgung mit hochwertigen personalisierten Behandlungen. Gegründet auf dem Prinzip, dass jeder maßgeschneiderte Lösungen verdient, die fortschrittliche Technologie mit menschlicher Note kombinieren.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">rocketrx.com</p>
+                        </div>
+                    </div>
+
+                    <h3>Unsere Globalen Operationen</h3>
+                    <p>Mit Hauptsitz in Liverpool Street, London, und Büros in London Docklands (unser Vertriebszentrum) und unserer US-Apotheke in Florida, betreuen wir Hunderttausende von Patienten in Großbritannien und den USA. Im Herzen jeder unserer Marken steht ein asynchroner Telemedizin-Prozess, der Engpässe beseitigt, den Zugang erhöht und die Effizienz durch Technologie verbessert.</p>
+
+                    <p><strong>Unsere Mission:</strong> Wir beseitigen Barrieren zur Versorgung, indem wir nahtlosen Zugang zu den benötigten Medikamenten bieten—keine Arztbesuche, kein Warten in Apothekenschlangen und keine zusätzliche Komplexität. Unser Ansatz ermöglicht es Kunden, ihre Gesundheit privat und bequem zu verwalten, unterstützt von einem Team registrierter Ärzte und Apotheker.</p>
+                </section>
+
+                <section class="section">
+                    <h2>Partnerschaftsvorteile</h2>
+                    <p>Wenn Sie sich mit der HeliosX Group zusammenschließen, erhalten Sie Zugang zu einem dynamischen, wachstumsorientierten Gesundheitsökosystem, das sich für Innovation, Qualität und globale Expansion einsetzt.</p>
+                    
+                    <ul>
+                        <li><strong>Globaler Marktzugang:</strong> Zugang zu unserem etablierten Netzwerk, das über 2 Millionen Kunden in Großbritannien und den USA über unsere fünf großen Marken betreut</li>
+                        <li><strong>Vertikal Integrierte Plattform:</strong> Partnerschaft mit dem weltweit größten vertikal integrierten Gesundheitsnetzwerk von Klinikern und Apotheken</li>
+                        <li><strong>Regulatorische Exzellenz:</strong> Umfassender Compliance-Rahmen für MHRA-, FDA- und internationale pharmazeutische Vorschriften mit Expertensupport</li>
+                        <li><strong>Gesundheits- und Sicherheitsstandards:</strong> Vollständige Unterstützung für CHAS-Akkreditierung und britische Gesundheits- und Sicherheitscompliance, um sicherzustellen, dass alle Partner die höchsten Sicherheitsstandards erfüllen</li>
+                        <li><strong>Innovationsführerschaft:</strong> Zusammenarbeit an hochmodernen digitalen Gesundheitslösungen, KI-gesteuerten Diagnostiken und pharmazeutischer Entwicklung der nächsten Generation</li>
+                        <li><strong>Qualitätssicherung:</strong> Partnerschaft mit einer Organisation, die sich GMP-, GDP-, ISO-Standards und kontinuierlicher Qualitätsverbesserung verpflichtet hat</li>
+                        <li><strong>Strategisches Wachstum:</strong> Werden Sie Teil eines schnell expandierenden Gesundheitsökosystems mit nachgewiesenem Erfolg und ehrgeizigen internationalen Expansionsplänen</li>
+                        <li><strong>Finanzielle Stabilität:</strong> Partnerschaft mit einer finanziell robusten Organisation mit solider Erfolgsbilanz und zuverlässigen Zahlungsbedingungen</li>
+                    </ul>
+                </section>
+
+                <section class="section chas-section">
+                    <h2>CHAS-Compliance und Sicherheitsstandards</h2>
+                    <p>Die HeliosX Group verpflichtet sich zu höchsten Gesundheits- und Sicherheitsstandards. Wir arbeiten ausschließlich mit CHAS-akkreditierten Lieferanten für alle Vertragsdienstleistungen, um umfassende Gesundheits- und Sicherheitscompliance in unseren Operationen zu gewährleisten.</p>
+                    
+                    <div class="chas-grid">
+                        <div class="chas-card">
+                            <h4>🛡️ CHAS-Akkreditierung</h4>
+                            <p>Alle Auftragnehmer müssen CHAS (Contractors Health and Safety Assessment Scheme) akkreditiert sein. Wir unterstützen Lieferanten durch den Akkreditierungsprozess.</p>
+                        </div>
+                        <div class="chas-card">
+                            <h4>📋 Sicherheitsdokumentation</h4>
+                            <p>Umfassende Gesundheits- und Sicherheitsrichtlinien, Risikobewertungen, Methodenerklärungen und Compliance mit britischen Gesundheits- und Sicherheitsvorschriften.</p>
+                        </div>
+                        <div class="chas-card">
+                            <h4>🎯 Fortlaufende Compliance</h4>
+                            <p>Regelmäßige Sicherheitsaudits, Vorfallmeldesysteme und kontinuierliche Verbesserungsprogramme zur Aufrechterhaltung höchster Sicherheitsstandards.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cta-section">
+                    <div class="cta-content">
+                        <h2>Bereit für eine Partnerschaft mit HeliosX?</h2>
+                        <p>Werden Sie Teil unseres vertrauenswürdigen Lieferantennetzwerks und Teil der Revolution der Gesundheitsinnovation. Unser sicherer Bewerbungsprozess stellt sicher, dass wir uns mit legitimen Geschäftspartnern verbinden.</p>
+                        <div class="cta-buttons">
+                            <button class="cta-button" onclick="showEmailModal()">
+                                Sichere Bewerbung Starten
+                            </button>
+                            <a href="mailto:elena.nutu@heliosx.com" class="cta-button secondary">
+                                Direkter Kontakt
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- DUTCH CONTENT -->
+    <div class="lang-content" id="content-nl">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <h1>Leveranciers Partner Portaal</h1>
+                    <p class="subtitle">Sluit u aan bij het vertrouwde leveranciersnetwerk van HeliosX Group en lever excellentie in digitale gezondheids- en farmaceutische oplossingen wereldwijd</p>
+                    <div class="header-stats">
+                        <div class="stat">
+                            <span class="stat-number">2M+</span>
+                            <span class="stat-label">Klanten Geholpen in 2024</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">70</span>
+                            <span class="stat-label">Gemiddelde NPS Score</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Teamleden</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Wereldwijde Merken</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="breadcrumb">
+            <div class="container">
+                <div class="breadcrumb-content">
+                    <a href="https://www.heliosx.com/">HeliosX Group</a> / <a href="#">Bedrijf</a> / <strong>Leveranciers Onboarding</strong>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="container">
+                <section class="section">
+                    <h2>Over HeliosX Group</h2>
+                    <p>HeliosX Group is een digitaal gezondheidsbedrij­f dat zich toelegt op het transformeren van de gezondheidszorg door het toegankelijker, effectiever en betrouwbaarder te maken voor iedereen. Opgericht in 2013 door Dwayne D'Souza, begonnen we met de visie om de gezondheidszorg te vereenvoudigen, erkennend dat terwijl andere industrieën gemak en snelheid hadden omarmd, de gezondheidszorg langzaam en gecompliceerd bleef.</p>
+                    
+                    <p>Wij zijn 's werelds grootste verticaal geïntegreerde gezondheidsnetwerk van clinici en apotheken, in staat om medicijnen wereldwijd voor te schrijven en te leveren. Ons digitale gezondheidsplatform biedt de meest handige toegang tot de beste voorgeschreven behandelingen voor klanten die leven met chronische aandoeningen.</p>
+
+                    <div class="business-grid">
+                        <div class="business-card">
+                            <h4>MedExpress & ZipHealth</h4>
+                            <p>Online dokter en apotheek die de manier waarop mensen hun gezondheid beheren transformeert. Snel, handig en competitief geprijsd, creëert de slimste manier voor klanten om controle over hun gezondheid te nemen.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">medexpress.co.uk | ziphealth.co</p>
+                        </div>
+                        <div class="business-card">
+                            <h4>Dermatica</h4>
+                            <p>Huidverzorging geleid door wetenschap, niet door trends. We verbeteren de toegang tot deskundige dermatologische adviezen en ontwerpen op bewijs gebaseerde behandelingen die gepersonaliseerd zijn naar uw unieke doelen.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">dermatica.co.uk | dermatica.com</p>
+                        </div>
+                        <div class="business-card">
+                            <h4>Levity</h4>
+                            <p>Modernisering van gewichtsverlies met onze door experts geleide aanpak en geavanceerde voorgeschreven medicijnen. Gestroomlijnde, probleemloze ervaring met behandelingen aangepast aan unieke behoeften.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">joinlevity.co.uk | joinlevity.com</p>
+                        </div>
+                        <div class="business-card">
+                            <h4>RocketRx</h4>
+                            <p>Herdefiniëring van gezondheidszorg met hoogwaardige gepersonaliseerde behandelingen. Gebaseerd op het principe dat iedereen op maat gemaakte oplossingen verdient, die geavanceerde technologie combineren met een menselijke toets.</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">rocketrx.com</p>
+                        </div>
+                    </div>
+
+                    <h3>Onze Wereldwijde Operaties</h3>
+                    <p>Gevestigd in Liverpool Street, Londen, met kantoren in London Docklands (ons distributiecentrum) en onze Amerikaanse apotheek in Florida, bedienen we honderdduizenden patiënten in het VK en de VS. In het hart van elk van onze merken ligt een asynchroon telemedicineproces dat knelpunten wegneemt, toegang vergroot en efficiëntie verbetert door technologie.</p>
+
+                    <p><strong>Onze Missie:</strong> We verwijderen barrières voor zorg door naadloze toegang te bieden tot de medicijnen die mensen nodig hebben—geen reizen naar de dokter, geen wachten in apotheekrijen, en geen toegevoegde complexiteit. Onze aanpak stelt klanten in staat om hun gezondheid privé en gemakkelijk te beheren, ondersteund door een team van geregistreerde artsen en apothekers.</p>
+                </section>
+
+                <section class="section">
+                    <h2>Partnerschap Voordelen</h2>
+                    <p>Wanneer u een partnerschap aangaat met HeliosX Group, krijgt u toegang tot een dynamisch, groei-georiënteerd gezondheidsecosysteem dat zich toelegt op innovatie, kwaliteit en wereldwijde expansie.</p>
+                    
+                    <ul>
+                        <li><strong>Wereldwijde Markttoegang:</strong> Toegang tot ons gevestigde netwerk dat meer dan 2 miljoen klanten bedient in het VK en de VS via onze vijf grote merken</li>
+                        <li><strong>Verticaal Geïntegreerd Platform:</strong> Partnerschap met 's werelds grootste verticaal geïntegreerde gezondheidsnetwerk van clinici en apotheken</li>
+                        <li><strong>Regulatoire Excellentie:</strong> Uitgebreid compliance-kader dat MHRA-, FDA- en internationale farmaceutische regelgevingen dekt met expertsupport</li>
+                        <li><strong>Gezondheids- en Veiligheidsstandaarden:</strong> Volledige ondersteuning voor CHAS-accreditatie en Britse gezondheids- en veiligheidscompliance, zodat alle partners voldoen aan de hoogste veiligheidsstandaarden</li>
+                        <li><strong>Innovatie Leiderschap:</strong> Samenwerking aan geavanceerde digitale gezondheidsoplossingen, AI-gedreven diagnostiek en farmaceutische ontwikkeling van de volgende generatie</li>
+                        <li><strong>Kwaliteitsborging:</strong> Partnerschap met een organisatie die zich toelegt op GMP-, GDP-, ISO-standaarden en continue kwaliteitsverbetering</li>
+                        <li><strong>Strategische Groei:</strong> Wordt deel van een snel expanderend gezondheidsecosysteem met bewezen succes en ambitieuze internationale expansieplannen</li>
+                        <li><strong>Financiële Stabiliteit:</strong> Partnerschap met een financieel robuuste organisatie met een sterke track record en betrouwbare betalingsvoorwaarden</li>
+                    </ul>
+                </section>
+
+                <section class="section chas-section">
+                    <h2>CHAS-Compliance en Veiligheidsstandaarden</h2>
+                    <p>HeliosX Group verbindt zich tot de hoogste gezondheids- en veiligheidsstandaarden. We werken uitsluitend met CHAS-geaccrediteerde leveranciers voor alle contractdiensten om uitgebreide gezondheids- en veiligheidscompliance in onze operaties te waarborgen.</p>
+                    
+                    <div class="chas-grid">
+                        <div class="chas-card">
+                            <h4>🛡️ CHAS-Accreditatie</h4>
+                            <p>Alle contractanten moeten CHAS (Contractors Health and Safety Assessment Scheme) geaccrediteerd zijn. We ondersteunen leveranciers door het accreditatieproces.</p>
+                        </div>
+                        <div class="chas-card">
+                            <h4>📋 Veiligheidsdocumentatie</h4>
+                            <p>Uitgebreide gezondheids- en veiligheidsbeleid, risicobeoordelingen, methodeverklaringen en compliance met Britse gezondheids- en veiligheidsreglementen.</p>
+                        </div>
+                        <div class="chas-card">
+                            <h4>🎯 Voortdurende Compliance</h4>
+                            <p>Regelmatige veiligheidsaudits, incidentmeldsystemen en continue verbeteringsprogramma's om de hoogste veiligheidsstandaarden te handhaven.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cta-section">
+                    <div class="cta-content">
+                        <h2>Klaar voor een Partnerschap met HeliosX?</h2>
+                        <p>Sluit u aan bij ons netwerk van vertrouwde leveranciers en wordt deel van de gezondheidsinnova­tierevolutie. Ons veilige aanvraagproces zorgt ervoor dat we verbinding maken met legitieme zakenpartners.</p>
+                        <div class="cta-buttons">
+                            <button class="cta-button" onclick="showEmailModal()">
+                                Beveiligde Aanvraag Starten
+                            </button>
+                            <a href="mailto:elena.nutu@heliosx.com" class="cta-button secondary">
+                                Direct Contact Opnemen
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1482,111 +1457,7 @@
                 
                 // Simulate success
                 document.getElementById('successState').classList.add('active');
-                
-                // Simulate receiving verification and showing form
-                setTimeout(() => {
-                    closeModal();
-                    showApplicationForm(email);
-                }, 3000);
             }, 2000);
-        }
-
-        // Show Application Form
-        function showApplicationForm(email) {
-            // Show the application form section
-            document.getElementById('applicationForm').classList.add('active');
-            document.getElementById('verifiedEmail').textContent = email;
-            
-            // Smooth scroll to form
-            document.getElementById('applicationForm').scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
-            
-            // Start session timer
-            startSessionTimer();
-            
-            // Initialize auto-save
-            initAutoSave();
-        }
-
-        // Session Timer
-        function startSessionTimer() {
-            let seconds = 7200; // 2 hours
-            
-            const timer = setInterval(() => {
-                seconds--;
-                
-                const hours = Math.floor(seconds / 3600);
-                const minutes = Math.floor((seconds % 3600) / 60);
-                const secs = seconds % 60;
-                
-                document.getElementById('sessionTimer').textContent = 
-                    `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-                
-                // Warning at 10 minutes
-                if (seconds === 600) {
-                    alert('Your session will expire in 10 minutes. Please save your progress.');
-                }
-                
-                if (seconds <= 0) {
-                    clearInterval(timer);
-                    alert('Session expired. Please verify your email again.');
-                    location.reload();
-                }
-            }, 1000);
-        }
-
-        // Auto-save
-        function initAutoSave() {
-            setInterval(() => {
-                const formData = new FormData(document.querySelector('#applicationForm'));
-                localStorage.setItem('supplierDraft', JSON.stringify(Object.fromEntries(formData)));
-                console.log('Draft saved');
-            }, 60000); // Every minute
-        }
-
-        // Save Draft Manually
-        function saveDraft() {
-            const formData = new FormData(document.querySelector('#applicationForm'));
-            localStorage.setItem('supplierDraft', JSON.stringify(Object.fromEntries(formData)));
-            alert('Draft saved successfully!');
-        }
-
-        // Submit Application
-        function submitApplication() {
-            // Validate required fields
-            const required = document.querySelectorAll('#applicationForm [required]');
-            let valid = true;
-            
-            required.forEach(field => {
-                if (!field.value || (field.type === 'checkbox' && !field.checked)) {
-                    valid = false;
-                    field.style.borderColor = 'var(--danger)';
-                }
-            });
-            
-            if (!valid) {
-                alert('Please complete all required fields.');
-                return;
-            }
-            
-            // Hide form and show success
-            document.getElementById('applicationForm').classList.remove('active');
-            document.getElementById('successScreen').classList.add('active');
-            
-            // Generate application ID
-            const appId = `APP-2024-${Math.floor(Math.random() * 9000) + 1000}`;
-            document.getElementById('applicationId').textContent = appId;
-            
-            // Clear draft
-            localStorage.removeItem('supplierDraft');
-            
-            // Scroll to success message
-            document.getElementById('successScreen').scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
         }
 
         // Resend Verification
@@ -1599,16 +1470,6 @@
                 document.getElementById('successState').classList.add('active');
             }, 2000);
         }
-
-        // Update Progress Bar
-        document.addEventListener('input', (e) => {
-            if (e.target.closest('#applicationForm')) {
-                const allInputs = document.querySelectorAll('#applicationForm input, #applicationForm textarea');
-                const filledInputs = Array.from(allInputs).filter(i => i.value || (i.type === 'checkbox' && i.checked)).length;
-                const progress = (filledInputs / allInputs.length) * 100;
-                document.getElementById('progressBar').style.width = `${progress}%`;
-            }
-        });
 
         // Language switching functionality
         function switchLanguage(lang) {
@@ -1645,14 +1506,13 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.section').forEach(section => {
-                if (!section.classList.contains('application-form-section')) {
-                    section.style.opacity = '0';
-                    section.style.transform = 'translateY(30px)';
-                    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    observer.observe(section);
-                }
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
             });
         });
     </script>
 </body>
 </html>
+    
