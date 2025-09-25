@@ -570,6 +570,25 @@
             width: 90%;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             animation: slideUp 0.3s ease;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #999;
+            cursor: pointer;
+            padding: 5px;
+            line-height: 1;
+            transition: color 0.2s ease;
+        }
+
+        .modal-close:hover {
+            color: #333;
         }
 
         @keyframes fadeIn {
@@ -795,6 +814,7 @@
     <!-- Email Verification Modal -->
     <div id="emailModal" class="modal-overlay">
         <div class="modal">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
             <div id="emailForm">
                 <h2>Verify Your Business Email</h2>
                 <p>To access our secure supplier application form, please verify your business email address.</p>
