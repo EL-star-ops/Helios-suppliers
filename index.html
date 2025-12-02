@@ -173,32 +173,69 @@
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
-            border-left: 4px solid;
+            border-left: 5px solid;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .brand-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: inherit;
         }
         
         .brand-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
         
         .brand-card.medexpress {
-            border-left-color: #3B82F6;
+            border-left-color: #0E7490;
+            background: linear-gradient(to right, rgba(14, 116, 144, 0.05), transparent);
+        }
+        
+        .brand-card.medexpress::after {
+            background: #0E7490;
         }
         
         .brand-card.ziphealth {
             border-left-color: #10B981;
+            background: linear-gradient(to right, rgba(16, 185, 129, 0.05), transparent);
+        }
+        
+        .brand-card.ziphealth::after {
+            background: #10B981;
         }
         
         .brand-card.dermatica {
             border-left-color: #EC4899;
+            background: linear-gradient(to right, rgba(236, 72, 153, 0.05), transparent);
+        }
+        
+        .brand-card.dermatica::after {
+            background: #EC4899;
         }
         
         .brand-card.levity {
             border-left-color: #F59E0B;
+            background: linear-gradient(to right, rgba(245, 158, 11, 0.05), transparent);
+        }
+        
+        .brand-card.levity::after {
+            background: #F59E0B;
         }
         
         .brand-card.rocketrx {
             border-left-color: #8B5CF6;
+            background: linear-gradient(to right, rgba(139, 92, 246, 0.05), transparent);
+        }
+        
+        .brand-card.rocketrx::after {
+            background: #8B5CF6;
         }
         
         .brand-header {
@@ -212,6 +249,26 @@
             font-size: 24px;
             font-weight: 700;
             color: #1a1a1a;
+        }
+        
+        .brand-card.medexpress .brand-name {
+            color: #0E7490;
+        }
+        
+        .brand-card.ziphealth .brand-name {
+            color: #10B981;
+        }
+        
+        .brand-card.dermatica .brand-name {
+            color: #EC4899;
+        }
+        
+        .brand-card.levity .brand-name {
+            color: #F59E0B;
+        }
+        
+        .brand-card.rocketrx .brand-name {
+            color: #8B5CF6;
         }
         
         .brand-flags {
@@ -228,6 +285,27 @@
         .brand-urls {
             font-size: 13px;
             color: #6B7280;
+            font-weight: 500;
+        }
+        
+        .brand-card.medexpress .brand-urls {
+            color: #0E7490;
+        }
+        
+        .brand-card.ziphealth .brand-urls {
+            color: #10B981;
+        }
+        
+        .brand-card.dermatica .brand-urls {
+            color: #EC4899;
+        }
+        
+        .brand-card.levity .brand-urls {
+            color: #F59E0B;
+        }
+        
+        .brand-card.rocketrx .brand-urls {
+            color: #8B5CF6;
         }
         
         .benefits-section {
