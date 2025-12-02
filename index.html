@@ -913,19 +913,21 @@
             }
             
             // Show success message
-            messageDiv.textContent = `Success! We've sent the secure application link to ${email}. Please check your inbox and follow the instructions to complete your supplier registration.`;
+            messageDiv.textContent = `Success! Opening your supplier application form...`;
             messageDiv.className = 'message success';
             
             // Clear the form
             event.target.reset();
             
-            // Redirect to the Google Form after 2 seconds
+            // Open the Google Form directly in a new tab after 1 second
             setTimeout(() => {
-                const confirmed = confirm('Ready to complete your supplier application? Click OK to proceed to the form now.');
-                if (confirmed) {
-                    window.open(GOOGLE_FORM_URL, '_blank');
+                const formWindow = window.open(GOOGLE_FORM_URL, '_blank');
+                
+                // Check if popup was blocked
+                if (!formWindow || formWindow.closed || typeof formWindow.closed == 'undefined') {
+                    messageDiv.innerHTML = `Success! Your form is ready. <a href="${GOOGLE_FORM_URL}" target="_blank" style="color: #065F46; font-weight: bold; text-decoration: underline;">Click here to open the application form</a>`;
                 }
-            }, 2000);
+            }, 1000);
         }
     </script>
 </body>
