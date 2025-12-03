@@ -799,13 +799,9 @@
     </div>
     
     <script>
-        // ============================================
-        // CONFIGURATION - YOUR FORM LINKS
-        // ============================================
+        // CRITICAL: Update this URL with your actual Google Form link
         const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeSqPXJOgm_Jsuti4gkv3FXGdRBia3H5E0yTO73uoqZbh7QrA/viewform';
-        const TRACKER_SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/1ZLsaDpRb4tL-pEFpG2nUJL7aSoC8wkeZ1ZF_0Bs-iMM/edit?resourcekey=&gid=891823943#gid=891823943';
 
-        // Translation system
         const translations = {
             en: {
                 "hero-title": "Supplier Partner Portal",
@@ -822,28 +818,23 @@
                 "brand-ziphealth-desc": "Online doctors and pharmacies are transforming the way people manage their health. Fast, convenient, and competitively priced, we create the smartest way for customers to take control of their health.",
                 "brand-dermatica-desc": "Skincare led by science, not trends. We improve access to expert dermatology advice and design evidence-based treatments that are personalized to our customers' skin goals.",
                 "brand-levity-desc": "Modernizing weight loss with our expert-led approach and cutting-edge GLP-1 medication. Streamlined, hassle-free experience with prescription treatments tailored to unique needs.",
-                "brand-rocketrx-desc": "Redefining men's healthcare with high-quality, personalized treatments. Founded on the principle that everyone deserves tailored solutions and exceptional care.",
-                "footer": "© 2025-2026 HeliosX Group. All rights reserved. | Privacy Policy | Terms of Service"
+                "brand-rocketrx-desc": "Redefining men's healthcare with high-quality, personalized treatments. Founded on the principle that everyone deserves tailored solutions and exceptional care."
             },
             de: {
                 "hero-title": "Lieferanten-Partner-Portal",
-                "hero-subtitle": "Treten Sie dem vertrauenswürdigen Lieferantennetzwerk der HeliosX Group bei und liefern Sie Exzellenz in digitalen Gesundheits- und Pharmalösungen weltweit",
-                "footer": "© 2025-2026 HeliosX Group. Alle Rechte vorbehalten. | Datenschutz | Nutzungsbedingungen"
+                "hero-subtitle": "Treten Sie dem vertrauenswürdigen Lieferantennetzwerk der HeliosX Group bei und liefern Sie Exzellenz in digitalen Gesundheits- und Pharmalösungen weltweit"
             },
             es: {
                 "hero-title": "Portal de Socios Proveedores",
-                "hero-subtitle": "Únase a la red confiable de proveedores del Grupo HeliosX que brindan excelencia en soluciones farmacéuticas y de salud digital en todo el mundo",
-                "footer": "© 2025-2026 HeliosX Group. Todos los derechos reservados. | Política de privacidad | Términos de servicio"
+                "hero-subtitle": "Únase a la red confiable de proveedores del Grupo HeliosX que brindan excelencia en soluciones farmacéuticas y de salud digital en todo el mundo"
             },
             fr: {
                 "hero-title": "Portail Partenaires Fournisseurs",
-                "hero-subtitle": "Rejoignez le réseau de fournisseurs de confiance du Groupe HeliosX offrant l'excellence dans les solutions pharmaceutiques et de santé numérique dans le monde entier",
-                "footer": "© 2025-2026 HeliosX Group. Tous droits réservés. | Politique de confidentialité | Conditions d'utilisation"
+                "hero-subtitle": "Rejoignez le réseau de fournisseurs de confiance du Groupe HeliosX offrant l'excellence dans les solutions pharmaceutiques et de santé numérique dans le monde entier"
             },
             it: {
                 "hero-title": "Portale Partner Fornitori",
-                "hero-subtitle": "Unisciti alla rete di fornitori affidabili del Gruppo HeliosX che offrono eccellenza nelle soluzioni farmaceutiche e di salute digitale in tutto il mondo",
-                "footer": "© 2025-2026 HeliosX Group. Tutti i diritti riservati. | Informativa sulla privacy | Termini di servizio"
+                "hero-subtitle": "Unisciti alla rete di fornitori affidabili del Gruppo HeliosX che offrono eccellenza nelle soluzioni farmaceutiche e di salute digitale in tutto il mondo"
             }
         };
         
@@ -855,24 +846,23 @@
                 }
             });
             
-            // Update active button
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             event.target.classList.add('active');
             
-            // Save preference
             localStorage.setItem('preferredLanguage', lang);
         }
         
-        // Load saved language preference
         window.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferredLanguage');
             if (savedLang && savedLang !== 'en') {
-                const langBtn = document.querySelector(`.lang-btn[onclick="setLanguage('${savedLang}')"]`);
-                if (langBtn) {
-                    langBtn.click();
-                }
+                const buttons = document.querySelectorAll('.lang-btn');
+                buttons.forEach(btn => {
+                    if (btn.textContent.toLowerCase() === savedLang) {
+                        btn.click();
+                    }
+                });
             }
         });
         
@@ -887,7 +877,6 @@
             const email = event.target.querySelector('.email-input').value.trim();
             const messageDiv = document.getElementById('message');
             
-            // List of free email providers to block
             const freeEmailProviders = [
                 'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 
                 'aol.com', 'icloud.com', 'mail.com', 'protonmail.com',
@@ -895,7 +884,6 @@
                 'googlemail.com', 'btinternet.com', 'virginmedia.com'
             ];
             
-            // Validate email format
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 messageDiv.textContent = 'Please enter a valid email address.';
@@ -905,29 +893,20 @@
             
             const emailDomain = email.split('@')[1].toLowerCase();
             
-            // Check if it's a free email provider
             if (freeEmailProviders.includes(emailDomain)) {
                 messageDiv.textContent = 'Please use a valid business email address. Personal email addresses (Gmail, Yahoo, Hotmail, etc.) are not accepted.';
                 messageDiv.className = 'message error';
                 return;
             }
             
-            // Show success message
-            messageDiv.textContent = `Success! Opening your supplier application form...`;
+            messageDiv.innerHTML = `✓ Email verified! Opening application form...<br><small>If the form doesn't open, <a href="${GOOGLE_FORM_URL}" target="_blank" style="color: #065F46; font-weight: bold; text-decoration: underline;">click here</a></small>`;
             messageDiv.className = 'message success';
             
-            // Clear the form
             event.target.reset();
             
-            // Open the Google Form directly in a new tab after 1 second
             setTimeout(() => {
-                const formWindow = window.open(GOOGLE_FORM_URL, '_blank');
-                
-                // Check if popup was blocked
-                if (!formWindow || formWindow.closed || typeof formWindow.closed == 'undefined') {
-                    messageDiv.innerHTML = `Success! Your form is ready. <a href="${GOOGLE_FORM_URL}" target="_blank" style="color: #065F46; font-weight: bold; text-decoration: underline;">Click here to open the application form</a>`;
-                }
-            }, 1000);
+                window.open(GOOGLE_FORM_URL, '_blank');
+            }, 500);
         }
     </script>
 </body>
